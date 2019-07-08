@@ -14,13 +14,16 @@ algorithms. The best was the `Radau` implicit algorithm. Because it is
 an implicit algorithm, it takes more calculations per step.
 
 # Results
-To test the integrations I turned off the driving force by setting $b = 0$,  
-the damping by setting $\gamma = 0$, and used a small amplitude to make the 
+To test the integrations I turned off the driving force by setting `b = 0`,  
+the damping by setting `\gamma = 0`, and used a small amplitude to make the 
 ocsillation linear.
 
 The Velocity Verlet is clearly the winner. First it conserves energy. This 
-can seen because over 100,000 steps, the $\phi$-$\omega$ phase plot repeats 
-itself in a clean line. It also has an execution time of 2.05 seconds.
+can seen because over 100,000 steps, the `phi-omega` phase plot repeats 
+itself in a clean line. It also has an execution time of 2.05 seconds. The 
+variables versus time plots show constant amplitude, so energy is neither 
+lost nor gained in the integration.
+![Fig 1](MCO_Int_VV1.png)
 
 The next best algorithm is the Radau algorithm. Over 100,000 steps, the 
 amplitude instead of staying constant, decreases by about 10%. The phase 
